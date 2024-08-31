@@ -54,7 +54,7 @@ const faturamentoJ = `{
     "Outros": 19849.53
 }`
 
-const faturamentoPorEstado = JSON.parse(faturamentoJson);
+const faturamentoPorEstado = JSON.parse(faturamentoJ);
 const faturamentoTotal = Object.values(faturamentoPorEstado).reduce((acc, valor)=> acc + valor, 0)
 
 for(const [estado, valor]of Object.entries(faturamentoPorEstado)){
